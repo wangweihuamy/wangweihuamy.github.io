@@ -4,9 +4,9 @@
 
 一个简洁轻量化的响应式[Hexo](https://hexo.io/)博客主题。
 
-- [点击预览](https://chaooo.github.io/)
+- 点击预览[【深色主题】](https://chaooo.github.io/)、[【浅色主题】](https://chaoo.oschina.io/)
 
-[![BlueLake template preview](http://cdn.chaooo.top/hexo/BlueLake.jpg "BlueLake template preview")](https://chaooo.github.io/)
+[![BlueLake template preview](http://cdn.chaooo.top/hexo/BlueLake.jpg)](https://chaooo.github.io/)
 
 ## 安装
 
@@ -109,7 +109,7 @@ local_search: true ## Use a javascript-based local search engine, true/false.
 #Copyright
 copyright: 
   enable: true #display article copyright information, true/false.
-  describe: #copyright description
+  describe: 转载请注明出处 #copyright description
   
 # MathJax Support
 mathjax:
@@ -311,6 +311,36 @@ jsonContent:
 
 #### 语言
 该主题目前有七种语言：简体中文（zh-CN），繁体中文（zh-TW），英语（en），法语（fr-FR），德语（de-DE），韩语 （ko）,西班牙语（es-ES）,欢迎修改主题并翻译成其他语言。
+
+
+
+#### 评论
+目前主题集成六种第三方评论，分别是[多说评论](http://duoshuo.com)、[Disqus评论](https://disqus.com)、[来必力评论](https://livere.com)、[友言评论](http://www.uyan.cc/)、[网易云跟帖评论](https://gentie.163.com/info.html)、[畅言评论](http://changyan.kuaizhan.com)、基于Github Issue的[GITALK](https://gitalk.github.io/)，推荐[gitalk](https://gitalk.github.io/)。
+1. 需要 GitHub Application，如果没有[点击这里申请](https://github.com/settings/applications/new)。
+  - Application name： 应用名称，随意
+  - Homepage URL： 网站URL，对应自己博客地址
+  - Application description ：描述，随意
+  - Authorization callback URL：# 网站URL，博客地址就好
+  - 点击注册，页面会出现其中**Client ID**和**Client Secret**在后面的配置中需要用到
+
+2. 配置`主题_config.yml`：
+``` yml 主题_config.yml https://github.com/chaooo/hexo-theme-BlueLake/blob/master/_config.yml themes/BlueLake/_config.yml
+#Cmments
+comment:
+  gitalk:
+    enable: true ## 开启gitalk
+    owner: ## GitHub的用户名
+    repo: ## 此评论存放的GitHub仓库
+    client_id: ## 复制刚才生成的clientID，例如. 75752dafe7907a897619
+    client_secret: ## 复制刚才生成的clientSecret，例如. ec2fb9054972c891289640354993b662f4cccc50
+    admin: ## Github的用户名
+    language: zh-CN ## Language
+    pagerDirection: last # Comment sorting direction, available values are last and first.
+```
+
+## 更多配置
+更多详细配置请移步：[【Hexo博客折腾】BlueLake博客主题的详细配置](https://chaooo.github.io/article/20161229.html)
+
 
 ## Solutions
 - 检查您当前的hexo的根目录，是否包含`source /`，`themes /`等。
